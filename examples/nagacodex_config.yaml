@@ -1,0 +1,88 @@
+# Naga Codex — example config for generate_entity_schema.py + build_prompt_set.py
+# Adapt for any client — this file drives both the schema generator and the AI probe.
+
+organization:
+  type: ProfessionalService
+  name: Naga Codex
+  url: https://nagacodex.cloud
+  description: >
+    Naga Codex ist eine Digital-Performance-Beratung aus Hamburg,
+    die professionelle Websites, SEO und KI-Sichtbarkeit für Unternehmen im
+    deutschsprachigen Raum entwickelt.
+  city: Hamburg
+  country: DE
+  email: sonic13.ch@googlemail.com
+  founding_year: 2023
+  same_as:
+    - https://www.linkedin.com/in/maurice-holda
+    # Add Wikipedia, Wikidata, Crunchbase URLs once available — these are the
+    # strongest entity disambiguation signals for AI systems.
+  services:
+    - SEO-Audit & KI-Sichtbarkeits-Analyse
+    - Landing Page Design (hochwertig, KI-ready)
+    - Structured Data / JSON-LD Implementierung
+    - Performance Optimierung (Core Web Vitals)
+    - Cold Outreach mit personalisierten Sample-Pages
+  areas_served:
+    - Hamburg
+    - Deutschland
+    - DACH
+
+webpage:
+  url: https://nagacodex.cloud
+  name: Naga Codex — Digital Performance Consulting Hamburg
+  description: >
+    Professionelle Websites, SEO und KI-Sichtbarkeit für Unternehmen im
+    deutschsprachigen Raum. Wir machen Ihre Marke auffindbar — in Google,
+    Bing und KI-Suchen wie ChatGPT, Perplexity und Google AI Overviews.
+  page_type: WebPage
+  author_name: Maurice Holda
+  author_url: https://www.linkedin.com/in/maurice-holda
+
+persons:
+  - name: Maurice Holda
+    url: https://nagacodex.cloud
+    job_title: Gründer & Digital Performance Consultant
+    same_as:
+      - https://www.linkedin.com/in/maurice-holda
+    description: >
+      Maurice Holda gründete Naga Codex mit dem Fokus auf KI-ready Websites
+      und messbare digitale Sichtbarkeit für den deutschen Mittelstand.
+
+faq:
+  - question: Was ist KI-SEO (GEO/AEO)?
+    answer: >
+      KI-SEO — auch Generative Engine Optimization (GEO) oder Answer Engine
+      Optimization (AEO) genannt — umfasst Maßnahmen, die dafür sorgen, dass
+      Ihre Marke und Inhalte in den Antworten von KI-Systemen wie ChatGPT,
+      Perplexity, Google AI Overviews und Bing Copilot zitiert werden.
+      Im Unterschied zu klassischem SEO geht es nicht nur um Rankings,
+      sondern darum, als vertrauenswürdige Quelle in generierten Antworten
+      zu erscheinen.
+  - question: Was kostet ein SEO-Audit bei Naga Codex?
+    answer: >
+      Ein initiales SEO- und KI-Sichtbarkeits-Audit gibt es als schlankes
+      Diagnostic-Paket. Kontaktieren Sie uns über die Website für ein
+      unverbindliches Gespräch.
+  - question: Welche Suchmaschinen deckt ihr ab?
+    answer: >
+      Wir optimieren für alle relevanten Plattformen: Google Search und
+      Google AI Overviews, Bing und Bing Copilot (Yahoo ist Bing-powered),
+      sowie KI-Antwortmaschinen wie ChatGPT (mit Web-Suche),
+      Perplexity und Claude.
+
+# --- AI PROBE CONFIGURATION ---
+# Used by build_prompt_set.py to generate buyer-intent prompts for citation measurement.
+probe:
+  category: Digital-Performance-Beratung
+  services:
+    - SEO-Audit
+    - Landing Page Design
+    - KI-Sichtbarkeit
+  location: Hamburg
+  lang: both  # de | en | both
+  competitors:
+    - Hype Group
+    - Leap Agency
+    - Orca Digital
+    - SinnerSchrader

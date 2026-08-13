@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "search-visibility-engineering"
+version = "1.0.0"
+description = "SEO + AI search visibility toolkit — audit, schema, measure. Covers Google, Bing, Yahoo, ChatGPT, Perplexity, AI Overviews, Bing Copilot."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+  { name = "Maurice Holda", email = "sonic13.ch@googlemail.com" }
+]
+keywords = [
+  "seo", "geo", "aeo", "ai-visibility", "search-optimization",
+  "json-ld", "structured-data", "chatgpt", "perplexity", "google",
+  "bing", "ai-overviews", "naga-codex"
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Information Technology",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Internet :: WWW/HTTP",
+  "Topic :: Internet :: WWW/HTTP :: Indexing/Search",
+]
+requires-python = ">=3.9"
+dependencies = [
+  "requests>=2.31.0",
+  "beautifulsoup4>=4.12.0",
+  "lxml>=4.9.0",
+  "pyyaml>=6.0",
+]
+
+[project.urls]
+Homepage = "https://nagacodex.cloud"
+Repository = "https://github.com/Nagacash/search-visibility-engineering"
+"Bug Tracker" = "https://github.com/Nagacash/search-visibility-engineering/issues"
+
+[project.scripts]
+seo-audit-page      = "audit_page:main"
+seo-audit-tech      = "audit_technical:main"
+seo-schema          = "generate_entity_schema:main"
+seo-prompts         = "build_prompt_set:main"
+seo-report          = "score_report:main"
